@@ -1,1 +1,161 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Fredini</title><meta name="description" content="Full Stack Developer, Researcher, AI Enthusiast "/><meta itemprop="name" content="Full Stack Developer, Researcher, AI Enthusiast "><meta itemprop="description" content="Full Stack Developer, Researcher, AI Enthusiast "><meta itemprop="image"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Full Stack Developer, Researcher, AI Enthusiast "><meta name="twitter:description" content="Full Stack Developer, Researcher, AI Enthusiast "><meta name="twitter:image"><meta property="og:site_name" content="Full Stack Developer, Researcher, AI Enthusiast "><meta property="og:type" content="website"><meta property="og:url" content="https://linkedin.com/in/harsh-adwani-67122b16b/"><meta property="og:title" content="Full Stack Developer, Researcher, AI Enthusiast "><meta property="og:description" content="Full Stack Developer, Researcher, AI Enthusiast "><meta property="og:image"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" sizes="180x180" href="assets/images/8f7cb9e7de037c07.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/images/0adf2932e78e7213.png"><link rel="icon" type="image/png" sizes="16x16" href="assets/images/b1ba879833e94ae6.png"><link rel="manifest" href="83eb0899ca40f015.webmanifest"><link rel="mask-icon" href="assets/images/8d02841183231ad3.svg" color="#9933ff"><meta name="apple-mobile-web-app-title" content="Fredini"><meta name="application-name" content="Fredini"><meta name="msapplication-TileColor" content="#9933ff"><meta name="theme-color" content="#ffffff"><script defer="defer" src="bundle.3ea4b3f1364c1bb7.js"></script><link href="main.css" rel="stylesheet"></head><body><canvas class="webgl"></canvas><div class="overlay"></div><div id="cooking"><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div id="area"><div id="sides"><div id="pan"></div><div id="handle"></div></div><div id="pancake"><div id="pastry"></div><div id="pastry2"></div><div id="pastry3"></div></div></div><h1>scansionando la bellezza... <span id="progressPercentage"></span>%</h1></div><button class="start">INIZIARE</button></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d6d2ca" />
+    <title>Plateforme 10 - Interactive Map</title>
+    <script type="module" crossorigin src="/assets/index-49179779.js"></script>
+    <link rel="stylesheet" href="/assets/index-ba9398df.css">
+  </head>
+  <body>
+    <!-- <div id="debug"></div> -->
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="loading">
+          <img class="loader" src="/images/loader.svg" alt="Loader">
+          <p class="loading-progress">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+      <img class="logo" src="/images/logo-plateforme10.svg" alt="Logo Plateforme 10">
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Points of Interests -->
+      <div class="point mudac museum">
+        <img class="label" src="/images/logo-mudac.svg" alt="Logo Mudac">
+        <div class="text">Musée Cantonal de Design et d'Arts Appliqués Contemporains</div>
+      </div>
+      <div class="point elysee museum">
+        <img class="label" src="/images/logo-elysee.svg" alt="Logo Photo Elysée">
+        <div class="text">Photo Elysée</div>
+      </div>
+      <div class="point arcadia restaurant">
+        <img class="label icn" src="/images/icn-restaurant.svg" alt="Restaurant Icon">
+        <div class="text">Arcadia Restaurant</div>
+      </div>
+      <div class="point nabi restaurant">
+        <img class="label icn" src="/images/icn-restaurant.svg" alt="Restaurant Icon">
+        <div class="text">Le Nabi Café-Restaurant</div>
+      </div>
+      <div class="point lumen restaurant">
+        <img class="label icn" src="/images/icn-restaurant.svg" alt="Restaurant Icon">
+        <div class="text">Lumen Café </div>
+      </div>
+      <div class="point mcba museum">
+        <img class="label" src="/images/logo-mcba.svg" alt="Logo MCBA">
+        <div class="text">Musée Cantonal des Beaux-Arts Lausanne</div>
+      </div>
+
+      <!-- Info Panels  -->
+      <div class="info-panel">
+        <div class="info-panel-header">
+          <img class="close" src="/images/icn-close.svg" alt="">
+        </div>
+        <div class="info-panel-content">
+          <div class="info-panel-content-wrapper">
+            <img class="info-panel-image" src="" alt="">
+            <img class="info-panel-logo" src="" alt="">
+            <h2 class="info-panel-title"></h2>
+            <p class="info-panel-lead"></p>
+            <p class="info-panel-description"></p>
+            <table>
+              <caption>Schedule</caption>
+                <tr>
+                  <th scope="col">Days</th>
+                  <th scope="col">Time</th>
+                </tr>
+                <tr>
+                  <td class="col-min">Monday</td>
+                  <td class="info-panel-monday"></td>
+                </tr>
+                <tr>
+                  <td class="col-min">Tuesday</td>
+                  <td class="info-panel-tuesday"></td>
+                </tr>
+                <tr>
+                  <td class="col-min">Wednesday</td>
+                  <td class="info-panel-wednesday"></td>
+                </tr>
+                <tr>
+                  <td class="col-min">Thursday</td>
+                  <td class="info-panel-thursday"></td>
+                </tr>
+                <tr>
+                  <td class="col-min">Friday</td>
+                  <td class="info-panel-friday"></td>
+                </tr>
+                <tr>
+                  <td class="col-min">Saturday</td>
+                  <td class="info-panel-saturday"></td>
+                </tr>
+                <tr>
+                  <td class="col-min">Sunday</td>
+                  <td class="info-panel-sunday"></td>
+                </tr>
+            </table>
+            <table>
+              <caption>Contact</caption>
+              <tbody>
+                <tr>
+                  <th class="col-min" scope="row">Phone</th>
+                  <td class="info-panel-phone"></td>
+                </tr>
+                <tr>
+                  <th class="col-min"  scope="row">Email</th>
+                  <td class="info-panel-email"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <a class="info-panel-website" href="" target="_blank">
+              <button>Visit website</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="controls">
+        <p class="controls-mouse">
+          Mouse Controls<br><br>
+          Left - Rotate<br>
+          Right - Move<br>
+          Middle - Zoom
+        </p>
+        <p class="controls-touch">
+          Controls<br><br>
+          One Finger Drag - Rotate<br>
+          Two Finger Drag - Move<br>
+          Pinch/Spread - Zoom<br>
+        </p>
+      </div>
+      <div class="footer">
+        <div class="designed-by">
+          Made in Italy by <a href="http://fredini.it" target="_blank">fredini.it</a>
+        </div>
+        <div class="links">
+          <a href="https://www.comune.lucca.it/home" target="_blank">Citta di Lucca</a>
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>
