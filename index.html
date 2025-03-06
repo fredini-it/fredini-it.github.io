@@ -5,13 +5,30 @@
   <link rel="icon" type="image/x-icon" href="/it.ico" />
   <title>FREDINI</title>
   <style>
-    body { margin: 0; overflow: hidden; }
+    body { 
+      margin: 0; 
+      overflow: hidden; 
+    }
     #scene-container { 
       position: absolute; 
       width: 100%; 
       height: 100%; 
       top: 0; 
       left: 0; 
+    }
+    .stats-gl { 
+      position: absolute; 
+      top: 10px; 
+      left: 10px; 
+      z-index: 100; 
+    }
+    @media (max-width: 768px) {
+      .stats-gl {
+        top: 5px;
+        left: 5px;
+        transform: scale(0.8);
+        transform-origin: top left;
+      }
     }
   </style>
 
@@ -24,7 +41,7 @@
       }
     }
   </script>
-  <script type="module" crossorigin src="/assets/index-xlMp06ae.js"></script>
+  <script type="module" crossorigin src="/assets/index-CKbfbzhX.js"></script>
 </head>
 <body>
   <div id="scene-container"></div>
