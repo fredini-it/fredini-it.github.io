@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/it.ico" />
   <title>FREDINI</title>
   <style>
     body { margin: 0; overflow: hidden; }
@@ -14,7 +14,17 @@
       left: 0; 
     }
   </style>
-  <script type="module" crossorigin src="/assets/index-CZfGwIPv.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/",
+        "stats-gl": "https://cdn.jsdelivr.net/npm/stats-gl@3.6.0/dist/main.js"
+      }
+    }
+  </script>
+  <script type="module" crossorigin src="/assets/index-xlMp06ae.js"></script>
 </head>
 <body>
   <div id="scene-container"></div>
