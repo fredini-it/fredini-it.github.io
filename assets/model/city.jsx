@@ -10,7 +10,7 @@ import { useGLTF, PerspectiveCamera } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
 export function Model(props) {
-  const { scene } = useGLTF('/city-transformed.glb')
+  const { scene } = useGLTF('/city.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   return (
@@ -30,4 +30,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/city-transformed.glb')
+useGLTF.preload('/city.glb')
