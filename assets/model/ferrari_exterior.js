@@ -932,7 +932,7 @@ export const colorsExterior = {
         0.501960784313725,
         0.917647058823529
       ],
-      "tintThickness": 1.7
+      "tintThickness": 10 //1.7
     }
   },
   "15_Canna_di_Fucile": {
@@ -1187,7 +1187,7 @@ export const colorsExterior = {
     ],
     "clearCoat": {
       "isEnabled": true,
-      "intensity": 0.5,
+      "intensity": 1,
       "roughness": 0.01,
       "indexOfRefraction": 1,
       "isTintEnabled": false,
@@ -1196,7 +1196,7 @@ export const colorsExterior = {
         1,
         1
       ],
-      "tintThickness": 1
+      "tintThickness": 10
     }
   },
   "121_Green_Jewel": {
@@ -1715,7 +1715,7 @@ export const colorsExterior = {
     ],
     "clearCoat": {
       "isEnabled": true,
-      "intensity": 0.5,
+      "intensity": 1,
       "roughness": 0.1,
       "indexOfRefraction": 1,
       "isTintEnabled": true,
@@ -1724,7 +1724,7 @@ export const colorsExterior = {
         0.819963705323527,
         0.819963705323527
       ],
-      "tintThickness": 1
+      "tintThickness": 5
     }
   },
   "61_Nero_Stellato": {
@@ -2054,7 +2054,7 @@ export const colorsExterior = {
       "intensity": 1,
       "roughness": 0.01,
       "indexOfRefraction": 1,
-      "isTintEnabled": false,
+      "isTintEnabled": true,
       "tintColor": [
         0.0235294117647058,
         0.0274509803921568,
@@ -2150,13 +2150,13 @@ export const colorsExterior = {
       "intensity": 1,
       "roughness": 0,
       "indexOfRefraction": 1.6,
-      "isTintEnabled": false,
+      "isTintEnabled": true,
       "tintColor": [
         1,
         1,
         1
       ],
-      "tintThickness": 1
+      "tintThickness": 2
     }
   },
   "42_Rosso_Maranello": {
