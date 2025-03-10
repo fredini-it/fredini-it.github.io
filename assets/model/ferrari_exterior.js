@@ -2651,7 +2651,7 @@ export const colorsExterior = {
     ],
     "clearCoat": {
       "isEnabled": true,
-      "intensity": 1,
+      "intensity": 0.92,
       "roughness": 0.01,
       "indexOfRefraction": 1.29,
       "isTintEnabled": true,
@@ -2660,7 +2660,7 @@ export const colorsExterior = {
         0.788235294117647,
         0.788235294117647
       ],
-      "tintThickness": 1
+      "tintThickness": 4
     }
   },
   "": {

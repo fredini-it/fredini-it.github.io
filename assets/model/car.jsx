@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
@@ -20,7 +19,7 @@ export function tester(props) {
         castShadow
         receiveShadow
         geometry={nodes['1399bde9-8d0c-43d2-b8f2-6373dfd441da'].geometry}
-        material={materials.v_ext_chrome}
+        material={materials.ext_chrome}
         position={[-0.771, 0.315, 0.119]}
         rotation={[-1.48, -0.017, -3.042]}
         scale={[-0.1, 0.1, 0.1]}
@@ -50,7 +49,7 @@ export function tester(props) {
         castShadow
         receiveShadow
         geometry={nodes['6126effa-49e1-4cda-aab3-5c7b4463f4c2'].geometry}
-        material={materials.t_ext_carpaint}
+        material={materials.ext_chassis}
         position={[-1.399, 0.313, 0]}
         rotation={[-1.58, -0.01, 3.141]}
         scale={[-0.1, 0.1, 0.1]}
@@ -138,7 +137,7 @@ export function tester(props) {
         castShadow
         receiveShadow
         geometry={nodes['7f784793-3cd8-4e2f-9c85-bf5f53e4129e'].geometry}
-        material={materials.t_ext_carpaint_mirrorcover}
+        material={materials.ext_mirror_cover}
         position={[-1.399, 0.304, 0]}
         rotation={[-Math.PI / 2, -0.01, 0]}
         scale={0.1}
@@ -200,16 +199,6 @@ export function tester(props) {
         scale={0.1}
       />
       <mesh
-        name="1c50830c-3a77-485c-a763-6da1e229c85b"
-        castShadow
-        receiveShadow
-        geometry={nodes['1c50830c-3a77-485c-a763-6da1e229c85b'].geometry}
-        material={materials.v_ext_glass_outside_NORMAL}
-        position={[-1.4, 0.303, 0]}
-        rotation={[-Math.PI / 2, -0.01, 0]}
-        scale={0.1}
-      />
-      <mesh
         name="0c159aa1-469e-4520-af7c-f9ab28b96642"
         castShadow
         receiveShadow
@@ -232,7 +221,7 @@ export function tester(props) {
         castShadow
         receiveShadow
         geometry={nodes['4d723f1d-aede-4135-9959-62275d4c64e2'].geometry}
-        material={materials.v_ext_carbon}
+        material={materials.ext_carbon}
         position={[-1.4, 0.304, 0]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
@@ -247,11 +236,21 @@ export function tester(props) {
         scale={0.1}
       />
       <mesh
+        name="6a08ba78-f361-4f48-9c08-0fee04e617b4"
+        castShadow
+        receiveShadow
+        geometry={nodes['6a08ba78-f361-4f48-9c08-0fee04e617b4'].geometry}
+        material={materials.ext_livery_1}
+        position={[-1.359, 0.292, 0]}
+        rotation={[-Math.PI / 2, -0.01, 0]}
+        scale={0.1}
+      />
+      <mesh
         name="16d219c8-c8fe-4ad1-bee4-661f368967da"
         castShadow
         receiveShadow
         geometry={nodes['16d219c8-c8fe-4ad1-bee4-661f368967da'].geometry}
-        material={materials.t_ext_wheels_caliper}
+        material={materials.ext_brake_caliper}
         position={[-1.399, 0.307, -0.007]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
@@ -291,6 +290,16 @@ export function tester(props) {
         material={materials.SimpleColorMasked_Primer_Ferrari}
         position={[-1.4, 0.304, 0]}
         rotation={[-Math.PI / 2, 0, 0]}
+      />
+      <mesh
+        name="89e69e55-ed5f-41c9-b852-a16cdd172e02"
+        castShadow
+        receiveShadow
+        geometry={nodes['89e69e55-ed5f-41c9-b852-a16cdd172e02'].geometry}
+        material={materials.glass_window}
+        position={[-1.4, 0.304, 0]}
+        rotation={[-Math.PI / 2, -0.01, 0]}
+        scale={0.1}
       />
       <mesh
         name="1e595e79-7cbe-416e-a56e-b12da00631b6"
@@ -346,15 +355,6 @@ export function tester(props) {
         material={materials.Fender_Shield}
         position={[-0.65, 0.695, -0.959]}
         rotation={[-1.585, 0.001, 0.037]}
-      />
-      <mesh
-        name="01ab339a-70a2-4329-a462-d8e5ca6e1117"
-        castShadow
-        receiveShadow
-        geometry={nodes['01ab339a-70a2-4329-a462-d8e5ca6e1117'].geometry}
-        material={materials.v_ext_wiper}
-        position={[-1.399, 0.304, 0]}
-        rotation={[-Math.PI / 2, 0, 0]}
       />
       <mesh
         name="528354f1-8a82-4e8d-8d29-e11d5363ad3a"
@@ -430,6 +430,32 @@ export function tester(props) {
         position={[-1.652, 0.319, 0.026]}
         rotation={[-Math.PI / 2, -0.01, 0]}
       />
+      <group
+        name="95faaf9b-7285-48c4-aa83-f50d7ad7a631"
+        position={[-1.4, 0.304, 0]}
+        rotation={[-Math.PI / 2, -0.01, 0]}>
+        <mesh
+          name="95faaf9b-7285-48c4-aa83-f50d7ad7a631_1"
+          castShadow
+          receiveShadow
+          geometry={nodes['95faaf9b-7285-48c4-aa83-f50d7ad7a631_1'].geometry}
+          material={materials.ext_livery_3}
+        />
+        <mesh
+          name="95faaf9b-7285-48c4-aa83-f50d7ad7a631_2"
+          castShadow
+          receiveShadow
+          geometry={nodes['95faaf9b-7285-48c4-aa83-f50d7ad7a631_2'].geometry}
+          material={materials.ext_livery_2}
+        />
+        <mesh
+          name="95faaf9b-7285-48c4-aa83-f50d7ad7a631_3"
+          castShadow
+          receiveShadow
+          geometry={nodes['95faaf9b-7285-48c4-aa83-f50d7ad7a631_3'].geometry}
+          material={materials.ext_livery_1}
+        />
+      </group>
       <mesh
         name="a6f6454f-03f0-49a5-a171-31c5135373c2"
         castShadow
@@ -523,6 +549,15 @@ export function tester(props) {
         rotation={[-Math.PI / 2, 0, 0]}
       />
       <mesh
+        name="d0096348-3990-4110-87b5-579aea3e3684"
+        castShadow
+        receiveShadow
+        geometry={nodes['d0096348-3990-4110-87b5-579aea3e3684'].geometry}
+        material={materials.ext_wheel_highlight}
+        position={[-1.398, 0.321, 0.001]}
+        rotation={[-Math.PI / 2, 0, 0]}
+      />
+      <mesh
         name="318825ab-ddcc-4b26-b958-28f03e34ec29"
         castShadow
         receiveShadow
@@ -539,24 +574,6 @@ export function tester(props) {
         material={materials['wheel.001']}
         position={[-1.4, 0.35, 0]}
         rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        name="3f86edfc-a84b-4051-af55-fbf0456e2297"
-        castShadow
-        receiveShadow
-        geometry={nodes['3f86edfc-a84b-4051-af55-fbf0456e2297'].geometry}
-        material={materials.t_int_dash_lower_detail}
-        position={[-1.4, 0.304, 0]}
-        rotation={[-Math.PI / 2, -0.01, 0]}
-      />
-      <mesh
-        name="95faaf9b-7285-48c4-aa83-f50d7ad7a631"
-        castShadow
-        receiveShadow
-        geometry={nodes['95faaf9b-7285-48c4-aa83-f50d7ad7a631'].geometry}
-        material={materials.t_int_dash_lower_detail}
-        position={[-1.4, 0.304, 0]}
-        rotation={[-Math.PI / 2, -0.01, 0]}
       />
     </group>
   )
