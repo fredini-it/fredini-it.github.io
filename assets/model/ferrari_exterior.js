@@ -2051,7 +2051,7 @@ export const colorsExterior = {
     ],
     "clearCoat": {
       "isEnabled": true,
-      "intensity": 1,
+      "intensity": 0.85,
       "roughness": 0.01,
       "indexOfRefraction": 1,
       "isTintEnabled": true,
@@ -2060,7 +2060,7 @@ export const colorsExterior = {
         0.0274509803921568,
         0.0588235294117647
       ],
-      "tintThickness": 1
+      "tintThickness": 2
     }
   },
   "35_Rosso_Fuoco": {
@@ -2147,7 +2147,7 @@ export const colorsExterior = {
     ],
     "clearCoat": {
       "isEnabled": true,
-      "intensity": 1,
+      "intensity": 0.75,
       "roughness": 0,
       "indexOfRefraction": 1.6,
       "isTintEnabled": true,
@@ -2156,7 +2156,7 @@ export const colorsExterior = {
         1,
         1
       ],
-      "tintThickness": 2
+      "tintThickness": 3
     }
   },
   "42_Rosso_Maranello": {
