@@ -1,0 +1,90 @@
+[
+    {
+      "FNumber": "0",
+      "VIN": "ZF00",
+      "Marca": "Ferrari",
+      "Grupo": "599",
+      "Versao": "GTO",
+      "Modelo": "599 GTO",
+      "autoPaint": {
+        "ext_chassis": "130_Rosso_Magma",
+        "ext_roof": "130_Rosso_Magma",
+        "ext_livery_1": "159_Bianco_Italia_Opaco",
+        "ext_livery_2": "159_Bianco_Italia_Opaco",
+        "ext_livery_3": "159_Bianco_Italia_Opaco",
+        "ext_mirror_cover": "159_Bianco_Italia_Opaco",
+        "ext_mirror_base": "159_Bianco_Italia_Opaco",
+        "ext_wheel": "05_Aluminium",
+        "ext_wheel_highlight": "05_Aluminium",
+        "ext_brake_caliper": "130_Rosso_Magma",
+        "ext_carbon": "61_Nero_Stellato",
+        "ext_chrome": "154_Alluminio_Lucido"
+      }
+    },
+    {
+      "FNumber": "1",
+      "VIN": "ZF01",
+      "Marca": "Ferrari",
+      "Grupo": "599",
+      "Versao": "GTO",
+      "Modelo": "599 GTO",
+      "autoPaint": {
+        "ext_chassis": "24_Blu_tour_de_France",
+        "ext_roof": "24_Blu_tour_de_France",
+        "ext_livery_1": "40_Grigio_Silverstone_Opaco",
+        "ext_livery_2": "40_Grigio_Silverstone_Opaco",
+        "ext_livery_3": "40_Grigio_Silverstone_Opaco",
+        "ext_mirror_cover": "40_Grigio_Silverstone_Opaco",
+        "ext_mirror_base": "40_Grigio_Silverstone_Opaco",
+        "ext_wheel": "40_Grigio_Silverstone_Opaco",
+        "ext_wheel_highlight": "40_Grigio_Silverstone_Opaco",
+        "ext_brake_caliper": "01_Giallo_Modena",
+        "ext_carbon": "61_Nero_Stellato",
+        "ext_chrome": "154_Alluminio_Lucido"
+      }
+    },
+    {
+      "FNumber": "2",
+      "VIN": "ZF02",
+      "Marca": "Ferrari",
+      "Grupo": "599",
+      "Versao": "GTO",
+      "Modelo": "599 GTO",
+      "autoPaint": {
+        "ext_chassis": "04_Rosso_Corsa",
+        "ext_roof": "40_Grigio_Silverstone_Opaco",
+        "ext_livery_1": null,
+        "ext_livery_2": null,
+        "ext_livery_3": null,
+        "ext_mirror_cover": "40_Grigio_Silverstone_Opaco",
+        "ext_mirror_base": "40_Grigio_Silverstone_Opaco",
+        "ext_wheel": "05_Aluminium",
+        "ext_wheel_highlight": "05_Aluminium",
+        "ext_brake_caliper": "01_Giallo_Modena",
+        "ext_carbon": "61_Nero_Stellato",
+        "ext_chrome": "154_Alluminio_Lucido"
+      }
+    },
+    {
+      "FNumber": "3",
+      "VIN": "ZF03",
+      "Marca": "Ferrari",
+      "Grupo": "599",
+      "Versao": "GTO",
+      "Modelo": "599 GTO",
+      "autoPaint": {
+        "ext_chassis": "24_Blu_tour_de_France",
+        "ext_roof": "24_Blu_tour_de_France",
+        "ext_livery_1": "40_Grigio_Silverstone_Opaco",
+        "ext_livery_2": "40_Grigio_Silverstone_Opaco",
+        "ext_livery_3": "40_Grigio_Silverstone_Opaco",
+        "ext_mirror_cover": "40_Grigio_Silverstone_Opaco",
+        "ext_mirror_base": "40_Grigio_Silverstone_Opaco",
+        "ext_wheel": "40_Grigio_Silverstone_Opaco",
+        "ext_wheel_highlight": "40_Grigio_Silverstone_Opaco",
+        "ext_brake_caliper": "01_Giallo_Modena",
+        "ext_carbon": "61_Nero_Stellato",
+        "ext_chrome": "154_Alluminio_Lucido"
+      }
+    }
+  ]

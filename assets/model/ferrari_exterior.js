@@ -923,7 +923,7 @@ export const colorsExterior = {
     ],
     "clearCoat": {
       "isEnabled": true,
-      "intensity": 1,
+      "intensity": 0.9,
       "roughness": 0.01,
       "indexOfRefraction": 1.5,
       "isTintEnabled": true,
@@ -932,7 +932,7 @@ export const colorsExterior = {
         0.501960784313725,
         0.917647058823529
       ],
-      "tintThickness": 10 //1.7
+      "tintThickness": 3 //1.7
     }
   },
   "15_Canna_di_Fucile": {
@@ -2156,7 +2156,7 @@ export const colorsExterior = {
         1,
         1
       ],
-      "tintThickness": 3
+      "tintThickness": 1
     }
   },
   "42_Rosso_Maranello": {
