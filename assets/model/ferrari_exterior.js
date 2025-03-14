@@ -446,7 +446,7 @@ export const colorsExterior = {
       "intensity": 0.5,
       "roughness": 0.01,
       "indexOfRefraction": 1,
-      "isTintEnabled": false,
+      "isTintEnabled": true,
       "tintColor": [
         1,
         1,
@@ -494,7 +494,7 @@ export const colorsExterior = {
       "intensity": 0.5,
       "roughness": 0.01,
       "indexOfRefraction": 1,
-      "isTintEnabled": false,
+      "isTintEnabled": true,
       "tintColor": [
         1,
         1,
