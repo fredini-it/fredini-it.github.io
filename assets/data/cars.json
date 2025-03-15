@@ -1,11 +1,12 @@
 [
   {
-    "FNumber": "0",
+    "FModel": "25",
+    "FCar": "1560",
     "VIN": "ZF00",
-    "Marca": "Ferrari",
-    "Grupo": "599",
-    "Versao": "GTO",
-    "Modelo": "599 GTO",
+    "factory": "Ferrari",
+    "group": "599",
+    "version": "GTO",
+    "model": "599 GTO",
     "autoPaint": {
       "ext_chassis": "130_Rosso_Magma",
       "ext_roof": "130_Rosso_Magma",
@@ -20,12 +21,13 @@
     }
   },
   {
-    "FNumber": "1",
+    "FModel": "25",
+    "FCar": "1561",
     "VIN": "ZF01",
-    "Marca": "Ferrari",
-    "Grupo": "599",
-    "Versao": "GTO",
-    "Modelo": "599 GTO",
+    "factory": "Ferrari",
+    "group": "599",
+    "version": "GTO",
+    "model": "599 GTO",
     "autoPaint": {
       "ext_chassis": "24_Blu_tour_de_France",
       "ext_roof": "24_Blu_tour_de_France",
@@ -39,12 +41,13 @@
     }
   },
   {
-    "FNumber": "2",
+    "FModel": "25",
+    "FCar": "1562",
     "VIN": "ZF02",
-    "Marca": "Ferrari",
-    "Grupo": "599",
-    "Versao": "GTO",
-    "Modelo": "599 GTO",
+    "factory": "Ferrari",
+    "group": "599",
+    "version": "GTO",
+    "model": "599 GTO",
     "autoPaint": {
       "ext_chassis": "04_Rosso_Corsa",
       "ext_roof": "40_Grigio_Silverstone_Opaco",
@@ -58,12 +61,13 @@
     }
   },
   {
-    "FNumber": "3",
+    "FModel": "25",
+    "FCar": "1563",
     "VIN": "ZF03",
-    "Marca": "Ferrari",
-    "Grupo": "599",
-    "Versao": "GTO",
-    "Modelo": "599 GTO",
+    "factory": "Ferrari",
+    "group": "599",
+    "version": "GTO",
+    "model": "599 GTO",
     "autoPaint": {
       "ext_chassis": "41_Nero_Opaco",
       "ext_roof": "40_Grigio_Silverstone_Opaco",
@@ -72,17 +76,17 @@
       "ext_mirror_cover": "40_Grigio_Silverstone_Opaco",
       "ext_wheel": "10_Nero",
       "ext_brake_caliper": "04_Rosso_Corsa",
-      "ext_carbon": "61_Nero_Stellato",
-      "ext_chrome": "ext_chrome"
+      "ext_carbon": "61_Nero_Stellato"
     }
   },
   {
-    "FNumber": "4",
+    "FModel": "25",
+    "FCar": "1564",
     "VIN": "ZF04",
-    "Marca": "Ferrari",
-    "Grupo": "599",
-    "Versao": "GTO",
-    "Modelo": "599 GTO",
+    "factory": "Ferrari",
+    "group": "599",
+    "version": "GTO",
+    "model": "599 GTO",
     "autoPaint": {
       "ext_chassis": "159_Bianco_Italia_Opaco",
       "ext_roof": "159_Bianco_Italia_Opaco",
@@ -91,27 +95,27 @@
       "ext_mirror_cover": "24_Blu_tour_de_France",
       "ext_wheel": "05_Aluminium",
       "ext_brake_caliper": "05_Aluminium",
-      "ext_carbon": "61_Nero_Stellato",
-      "ext_chrome": "154_Alluminio_Lucido"
+      "ext_carbon": "61_Nero_Stellato"
     }
   },
   {
-    "FNumber": "5",
+    "FModel": "31",
+    "FCar": "1565",
     "VIN": "ZF05",
-    "Marca": "Ferrari",
-    "Grupo": "599",
-    "Versao": "GTO",
-    "Modelo": "599 GTO",
+    "factory": "Ferrari",
+    "group": "812",
+    "version": "Competizione",
+    "model": "812 Competizione",
     "autoPaint": {
-      "ext_chassis": "16_Nero_Daytona",
-      "ext_roof": "16_Nero_Daytona",
-      "ext_livery_1": "04_Rosso_Corsa",
-      "ext_livery_2": "04_Rosso_Corsa",
-      "ext_mirror_cover": "04_Rosso_Corsa",
-      "ext_wheel": "16_Nero_Daytona",
-      "ext_brake_caliper": "04_Rosso_Corsa",
-      "ext_carbon": "61_Nero_Stellato",
-      "ext_chrome": "154_Alluminio_Lucido"
+      "ext_chassis": "06_Rosso_Fiorano",
+      "ext_livery_1": "24_Blu_tour_de_France",
+      "ext_livery_2": "61_Nero_Stellato",
+      "ext_livery_3": null,
+      "ext_mirror_cover": "61_Nero_Stellato",
+      "ext_wheel": "61_Nero_Stellato",
+      "ext_wheel_highlight": null,
+      "ext_brake_caliper": "05_Aluminium",
+      "ext_exhaust": "ext_chrome"
     }
   }
 ]
