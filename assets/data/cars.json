@@ -94,7 +94,7 @@
       "ext_livery_2": "24_Blu_tour_de_France",
       "ext_mirror_cover": "24_Blu_tour_de_France",
       "ext_wheel": "05_Aluminium",
-      "ext_brake_caliper": "05_Aluminium",
+      "ext_brake_caliper": "24_Blu_tour_de_France",
       "ext_carbon": "61_Nero_Stellato"
     }
   },
@@ -107,14 +107,14 @@
     "version": "Competizione",
     "model": "812 Competizione",
     "autoPaint": {
-      "ext_chassis": "06_Rosso_Fiorano",
+      "ext_chassis": "159_Bianco_Italia_Opaco",
       "ext_livery_1": "24_Blu_tour_de_France",
       "ext_livery_2": "61_Nero_Stellato",
       "ext_livery_3": null,
-      "ext_mirror_cover": "61_Nero_Stellato",
-      "ext_wheel": "61_Nero_Stellato",
+      "ext_mirror_cover": "24_Blu_tour_de_France",
+      "ext_wheel": "05_Aluminium",
       "ext_wheel_highlight": null,
-      "ext_brake_caliper": "05_Aluminium",
+      "ext_brake_caliper": "24_Blu_tour_de_France",
       "ext_exhaust": "ext_chrome"
     }
   }
