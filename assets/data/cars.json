@@ -7,6 +7,10 @@
     "group": "599",
     "version": "GTO",
     "model": "599 GTO",
+    "currency": "BRL",
+    "price": 5000000,
+    "unity": "KM",
+    "odometer": 16431,
     "autoPaint": {
       "ext_chassis": "130_Rosso_Magma",
       "ext_roof": "130_Rosso_Magma",
@@ -114,6 +118,26 @@
       "ext_mirror_cover": "24_Blu_tour_de_France",
       "ext_wheel": "05_Aluminium",
       "ext_wheel_highlight": null,
+      "ext_brake_caliper": "24_Blu_tour_de_France",
+      "ext_exhaust": "ext_chrome"
+    }
+  },
+  {
+    "FModel": "35",
+    "FCar": "1566",
+    "VIN": "ZF06",
+    "factory": "Ferrari",
+    "group": "12",
+    "version": "Cilindri",
+    "model": "12Cilindri",
+    "autoPaint": {
+      "Paint": "159_Bianco_Italia_Opaco",
+      "ext_livery_1": "24_Blu_tour_de_France",
+      "ext_livery_2": "61_Nero_Stellato",
+      "ext_livery_3": null,
+      "ext_mirror_cover": "24_Blu_tour_de_France",
+      "ext_wheel_1": "05_Aluminium",
+      "ext_wheel_2": null,
       "ext_brake_caliper": "24_Blu_tour_de_France",
       "ext_exhaust": "ext_chrome"
     }
