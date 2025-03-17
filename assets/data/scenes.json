@@ -1,0 +1,18 @@
+[
+    {
+      "scene": "city",
+      "road": "asphalt",
+      "bench": "0", // Reuse material from parent
+      "sign": null, // Hide this part
+      "wall_01": "ext_chassis", //change to the same material of the current car loaded on the scene
+      "wall_02": "ext_brake_caliper", //change to the same material of the current car loaded on the scene
+    },
+    {
+        "scene": "studio",
+        "road": "asphalt",
+        "bench": "0", // Reuse material from parent
+        "sign": null, // Hide this part
+        "wall_01": "ext_chassis.material", //change to the same material of the current car loaded on the scene
+        "wall_02": "ext_brake_caliper.albedo", //change to the same material of the current car loaded on the scene
+      },
+]
