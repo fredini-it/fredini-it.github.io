@@ -2,7 +2,7 @@
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function 25(props) {
+export function 21(props) {
   const { nodes, materials } = useGLTF('/25.glb')
   return (
     <group {...props} dispose={null}>
@@ -196,7 +196,7 @@ export function 25(props) {
           castShadow
           receiveShadow
           geometry={nodes.Interior_Geo_lodA001_1.geometry}
-          material={materials.interior}
+          material={materials.int_color1}
         />
       </group>
       <mesh
@@ -221,7 +221,7 @@ export function 25(props) {
           castShadow
           receiveShadow
           geometry={nodes.Paint_Geo_lodA_1.geometry}
-          material={materials.ext_sideskirt}
+          material={materials.ext_carbon}
         />
       </group>
       <mesh
@@ -271,7 +271,7 @@ export function 25(props) {
           castShadow
           receiveShadow
           geometry={nodes.Interior_Geo_lodA005_1.geometry}
-          material={materials.interior}
+          material={materials.int_color1}
         />
       </group>
       <group name="DoorLPaint" position={[-0.06, 0.116, 0]} rotation={[Math.PI / 2, 0, Math.PI / 2]}>
@@ -337,7 +337,7 @@ export function 25(props) {
           castShadow
           receiveShadow
           geometry={nodes.Interior_Geo_lodA006_1.geometry}
-          material={materials.interior}
+          material={materials.int_color1}
         />
       </group>
       <group name="DoorRPaint" position={[-0.06, 0.116, 0]} rotation={[Math.PI / 2, 0, Math.PI / 2]}>
@@ -394,7 +394,7 @@ export function 25(props) {
           castShadow
           receiveShadow
           geometry={nodes.Interior_Geo_lodA009_2.geometry}
-          material={materials.interior}
+          material={materials.int_color1}
         />
       </group>
       <mesh
@@ -437,7 +437,7 @@ export function 25(props) {
           castShadow
           receiveShadow
           geometry={nodes.Interior_Geo_lodA008_1.geometry}
-          material={materials.interior}
+          material={materials.int_color1}
         />
       </group>
       <mesh
@@ -537,7 +537,7 @@ export function 25(props) {
           castShadow
           receiveShadow
           geometry={nodes.Interior_Geo_lodA010_2.geometry}
-          material={materials.interior}
+          material={materials.int_color1}
         />
       </group>
       <mesh
