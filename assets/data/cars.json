@@ -1,6 +1,6 @@
 [
   {
-    "FModel": "25",
+    "FModel": "26-transformed",
     "FCar": "1560",
     "VIN": "ZF00",
     "factory": "Ferrari",
@@ -8,17 +8,15 @@
     "version": "GTO",
     "model": "599 GTO",
     "autoPaint": {
-      "ext_chassis": "130_Rosso_Magma",
-      "ext_roof": "130_Rosso_Magma",
-      "ext_livery_1": "159_Bianco_Italia_Opaco",
-      "ext_livery_2": "159_Bianco_Italia_Opaco",
-      "ext_sideskirt": "0",
-      "ext_mirror_cover": "159_Bianco_Italia_Opaco",
-      "ext_wheel": "05_Aluminium",
-      "ext_wheel_highlight": "05_Aluminium",
+      "ext_chassis": "tinted_carbon_fiber",
+      "ext_roof": "matte_carbon_fiber",
+      "ext_livery_1": "130_Rosso_Magma",
+      "ext_livery_2": "130_Rosso_Magma",
+      "ext_sideskirt": "matte_carbon_fiber",
+      "ext_mirror_cover": "130_Rosso_Magma",
+      "ext_wheel": "10_Nero",
       "ext_brake_caliper": "130_Rosso_Magma",
-      "ext_carbon": "matte_carbon_fiber",
-      "ext_chrome": "ext_chrome"
+      "ext_carbon": "matte_carbon_fiber"
     }
   },
   {
@@ -64,7 +62,7 @@
     }
   },
   {
-    "FModel": "25",
+    "FModel": "26-transformed",
     "FCar": "1563",
     "VIN": "ZF03",
     "factory": "Ferrari",
@@ -73,11 +71,11 @@
     "model": "599 GTO",
     "autoPaint": {
       "ext_chassis": "tinted_carbon_fiber",
-      "ext_roof": "40_Grigio_Silverstone_Opaco",
+      "ext_roof": "matte_carbon_fiber",
       "ext_livery_1": "0",
       "ext_livery_2": "0",
-      "ext_sideskirt": "0",
-      "ext_mirror_cover": "40_Grigio_Silverstone_Opaco",
+      "ext_sideskirt": "matte_carbon_fiber",
+      "ext_mirror_cover": "matte_carbon_fiber",
       "ext_wheel": "10_Nero",
       "ext_brake_caliper": "04_Rosso_Corsa",
       "ext_carbon": "matte_carbon_fiber"
@@ -120,6 +118,7 @@
       "ext_wheel": "05_Aluminium",
       "ext_wheel_highlight": null,
       "ext_brake_caliper": "24_Blu_tour_de_France",
+      "ext_carbon": "matte_carbon_fiber",
       "ext_exhaust": "ext_chrome"
     }
   }
