@@ -1,6 +1,6 @@
 [
   {
-    "FModel": "26-transformed",
+    "FModel": "27-transformed",
     "FCar": "1560",
     "VIN": "ZF00",
     "factory": "Ferrari",
@@ -9,19 +9,19 @@
     "model": "599 GTO",
     "autoPaint": {
       "caixa": null,
-      "ext_chassis": "tinted_carbon_fiber",
-      "ext_roof": "tinted_carbon_fiber",
-      "ext_livery_1": "flaked_paint_with_tint",
-      "ext_livery_2": "flaked_paint_with_tint",
-      "ext_sideskirt": "matte_carbon_fiber",
-      "ext_mirror_cover": "flaked_paint_with_tint",
-      "ext_wheel": "10_Nero",
-      "ext_brake_caliper": "130_Rosso_Magma",
+      "ext_chassis": "magma_flake",
+      "ext_roof": "magma_flake",
+      "ext_livery_1": "159_Bianco_Italia_Opaco",
+      "ext_livery_2": "159_Bianco_Italia_Opaco",
+      "ext_sideskirt": "0",
+      "ext_mirror_cover": "magma_flake",
+      "ext_wheel": "05_Aluminium",
+      "ext_brake_caliper": "magma_flake",
       "ext_carbon": "matte_carbon_fiber"
     }
   },
   {
-    "FModel": "25",
+    "FModel": "27-transformed",
     "FCar": "1561",
     "VIN": "ZF01",
     "factory": "Ferrari",
@@ -42,7 +42,7 @@
     }
   },
   {
-    "FModel": "25",
+    "FModel": "27-transformed",
     "FCar": "1562",
     "VIN": "ZF02",
     "factory": "Ferrari",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "FModel": "26-transformed",
+    "FModel": "27-transformed",
     "FCar": "1563",
     "VIN": "ZF03",
     "factory": "Ferrari",
@@ -73,8 +73,8 @@
     "autoPaint": {
       "ext_chassis": "tinted_carbon_fiber",
       "ext_roof": "matte_carbon_fiber",
-      "ext_livery_1": "0",
-      "ext_livery_2": "0",
+      "ext_livery_1": "magma_flake",
+      "ext_livery_2": "magma_flake",
       "ext_sideskirt": "matte_carbon_fiber",
       "ext_mirror_cover": "matte_carbon_fiber",
       "ext_wheel": "10_Nero",
@@ -83,7 +83,7 @@
     }
   },
   {
-    "FModel": "25",
+    "FModel": "27-transformed",
     "FCar": "1564",
     "VIN": "ZF04",
     "factory": "Ferrari",
