@@ -83,7 +83,7 @@
     }
   },
   {
-    "FModel": "27-transformed",
+    "FModel": "gt-transformed",
     "FCar": "1564",
     "VIN": "ZF04",
     "factory": "Ferrari",
@@ -103,7 +103,7 @@
     }
   },
   {
-    "FModel": "f150bd-transformed",
+    "FModel": "f150bd3-transformed",
     "FCar": "1565",
     "VIN": "ZF05",
     "factory": "Ferrari",
