@@ -23,14 +23,14 @@
   {
     "FModel": "27-transformed",
     "FCar": "1561",
-    "VIN": "ZF01",
+    "VIN": "ZFF7",
     "factory": "Ferrari",
     "group": "599",
     "version": "GTO",
     "model": "599 GTO",
     "autoPaint": {
-      "ext_chassis": "24_Blu_tour_de_France",
-      "ext_roof": "24_Blu_tour_de_France",
+      "ext_chassis": "26_Blu_Scozia",
+      "ext_roof": "26_Blu_Scozia",
       "ext_livery_1": "12_Argento_Nurburgring",
       "ext_livery_2": "12_Argento_Nurburgring",
       "ext_sideskirt": "0",
@@ -103,7 +103,7 @@
     }
   },
   {
-    "FModel": "31",
+    "FModel": "f150bd-transformed",
     "FCar": "1565",
     "VIN": "ZF05",
     "factory": "Ferrari",
@@ -111,15 +111,19 @@
     "version": "Competizione",
     "model": "812 Competizione",
     "autoPaint": {
-      "ext_chassis": "159_Bianco_Italia_Opaco",
-      "ext_livery_1": "24_Blu_tour_de_France",
+      "t_ext_carpaint": "24_Blu_tour_de_France",
+      "v_ext_carpaint_bianco": "40_Grigio_Silverstone_Opaco",
       "ext_livery_2": "61_Nero_Stellato",
-      "ext_livery_3": null,
+      "v_ext_argento_nurburgring_matt": "67_Argento_Nurburgring_opaco",
       "ext_mirror_cover": "24_Blu_tour_de_France",
-      "ext_wheel": "05_Aluminium",
+      "t_ext_rim": "05_Aluminium",
       "ext_wheel_highlight": null,
       "ext_brake_caliper": "24_Blu_tour_de_France",
-      "ext_carbon": "matte_carbon_fiber",
+      "t_ext_roof": "tinted_carbon_fiber",
+      "t_ext_side_skirt": "tinted_carbon_fiber",
+      "t_ext_front_bumper_spoiler": "tinted_carbon_fiber",
+      "t_ext_rear_bumper_diffusor": "tinted_carbon_fiber",
+      "ext_carbon": "tinted_carbon_fiber",
       "ext_exhaust": "ext_chrome"
     }
   }
