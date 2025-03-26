@@ -14,11 +14,19 @@
     "pColor2": "ext_livery_1.color", 
   },
   {
-    "scene": "poster2",
-    "light": "studio",
-    "pColor1": "ext_chassis.color", 
-    "pColor2": "ext_livery_1.color", 
-    "text1": "model", //"599 GTO"
-    "text2": "year", //"2010"
+    "scene": "test",
+    "latitude": -23.6072661,
+    "longitude": -46.674824,
+    "northOffset": 0,
+    "minute": 0,
+    "hour": 12,
+    "day": 1,
+    "month": 1,
+    "animateTime": false,
+    "timeSpeed": 1,
+    "lightingMode": "sun",
+    "exposure": 1.0,
+    "dynamicExposure": true,
+    "toneMapping": "LinearToneMapping",
   },
 ]
