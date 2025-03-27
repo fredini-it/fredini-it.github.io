@@ -109,9 +109,23 @@
     }
   },
   {
+    "FModel": "f175-transformed",
+    "FCar": "1564",
+    "VIN": "ZF05",
+    "factory": "Ferrari",
+    "group": "purosangue",
+    "version": "GTO",
+    "model": "296 GTB",
+    "autoPaint": {
+      "t_ext_carpaint": "26_Blu_Scozia",
+      "t_ext_wheel_arch": "tinted_carbon_fiber",
+      "t_ext_rim": "05_Aluminium"
+    }
+  },
+  {
     "FModel": "f150bd3-transformed",
     "FCar": "1565",
-    "VIN": "ZF05",
+    "VIN": "ZF06",
     "factory": "Ferrari",
     "group": "812",
     "version": "Competizione",
