@@ -7,7 +7,7 @@
     "group": "599",
     "version": "GTO",
     "model": "599 GTO",
-    "autoPaint": {
+    "material": {
       "caixa": null,
       "ext_chassis": "magma_flake",
       "ext_roof": "magma_flake",
@@ -28,7 +28,7 @@
     "group": "599",
     "version": "GTO",
     "model": "599 GTO",
-    "autoPaint": {
+    "material": {
       "ext_chassis": "26_Blu_Scozia",
       "ext_roof": "26_Blu_Scozia",
       "ext_livery_1": "12_Argento_Nurburgring",
@@ -49,7 +49,7 @@
     "group": "599",
     "version": "GTO",
     "model": "599 GTO",
-    "autoPaint": {
+    "material": {
       "ext_chassis": "04_Rosso_Corsa",
       "ext_roof": "40_Grigio_Silverstone_Opaco",
       "ext_livery_1": "0",
@@ -70,7 +70,7 @@
     "group": "599",
     "version": "GTO",
     "model": "599 GTO",
-    "autoPaint": {
+    "material": {
       "ext_chassis": "tinted_carbon_fiber",
       "ext_roof": "matte_carbon_fiber",
       "ext_livery_1": "magma_flake",
@@ -90,7 +90,7 @@
     "group": "296",
     "version": "GTO",
     "model": "296 GTB",
-    "autoPaint": {
+    "material": {
       "t_ext_carpaint": "12_Argento_Nurburgring",
       "t_ext_carpaint_roof": "12_Argento_Nurburgring",
       "ext_livery_2": "61_Nero_Stellato",
@@ -116,8 +116,12 @@
     "group": "purosangue",
     "version": "GTO",
     "model": "f173vs_sp",
-    "autoPaint": {
-      "car_shadowplane": "f171_shadowplane_fantasy_circuit",
+    "material": {
+      "t_ext_carpaint": "tinted_carbon_fiber2",
+      "t_ext_carpaint_roof": "_CarbonFiber",
+      "t_ext_carpaint_side_mirrors": "01_Ferrari_CarbonFiber_blue",
+      "t_int_softparts_seat_outer": "08_Alcantara_Iroko",
+      "t_int_seat_carbon": "tinted_carbon_fiber",
       "F173_SP_Display": "f173vs_display",
       "shadowbox": "Blackout",
       "t_int_softparts_backwall_speaker": "01_Speaker_grid_Nero",
@@ -126,7 +130,7 @@
       "v_ext_badge_horse": "Badge_Horse",
       "v_ext_brake": "Ferrari_BrakeRotor",
       "v_ext_camera_glass": "Glass_privacy",
-      "v_ext_carbon_glossy": "_CarbonFiber",
+      "v_ext_carbon_glossy": "tinted_carbon_fiber",
       "v_ext_carbon_matt": "_CarbonFiber_matt",
       "v_ext_chrome": "02_Ferrari_Metal_chrom",
       "v_ext_ci_black": "01_ext_plastic_glossy_black",
@@ -180,7 +184,7 @@
       "v_int_buttons_lines": "01_Softtouch_Nero_Riffle",
       "v_int_buttons_riffle": "F173vs_Ferrari_Metal_chrom_riffle_rotors",
       "v_int_camera_lens_rear_bumper": "f173vs_vssp_camera_lense",
-      "v_int_carbon": "_CarbonFiber_matt",
+      "v_int_carbon": "tinted_carbon_fiber",
       "v_int_centerconsole_front_insert_bake": "08_ext_rubber_centerconsole_f142mvs",
       "v_int_centerconsole_rear_insert_01_bake": "08_ext_rubber_centerconsole_f142mvs",
       "v_int_centerconsole_rear_insert_02_bake": "08_ext_rubber_centerconsole_f142mvs",
@@ -236,9 +240,9 @@
       "v_int_softtouch_nero": "01_Softtouch_Nero",
       "v_int_speaker_nero": "01_Speaker_grid_Nero",
       "v_int_steering_wheel_logo": "Badge_Horse_Steeringwheel",
-      "v_int_tacho_glass": "Interior_Glass",
+      "v_int_tacho_glass": "Glass_Clear",
       "v_rim_white_inner": "05_ext_plastic_glossy_white",
-      "wheel": "M_Tire"
+      "t_ext_tire": "M_Tire"
     }
   },
   {
@@ -249,8 +253,8 @@
     "group": "812",
     "version": "Competizione",
     "model": "812 Competizione",
-    "autoPaint": {
-      "t_ext_carpaint": "24_Blu_tour_de_France",
+    "material": {
+      "t_ext_carpaint": "tinted_carbon_fiber",
       "v_ext_carpaint_bianco": "40_Grigio_Silverstone_Opaco",
       "ext_livery_2": "61_Nero_Stellato",
       "v_ext_argento_nurburgring_matt": "67_Argento_Nurburgring_opaco",
