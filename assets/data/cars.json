@@ -682,7 +682,7 @@
     }
   },
   {
-    "FModel": "27-transformed",
+    "FModel": "sf25-transformed",
     "FCar": "1562",
     "VIN": "ZF02",
     "factory": "Ferrari",
@@ -690,16 +690,6 @@
     "version": "GTO",
     "model": "599 GTO",
     "material": {
-      "ext_chassis": "03_Rosso_Corsa",
-      "ext_roof": "40_Grigio_Silverstone_Opaco",
-      "ext_livery_1": "0",
-      "ext_livery_2": "0",
-      "ext_sideskirt": "matte_carbon_fiber",
-      "ext_mirror_cover": "40_Grigio_Silverstone_Opaco",
-      "ext_wheel": "05_Aluminium",
-      "ext_brake_caliper": "01_Giallo_Modena",
-      "ext_carbon": "matte_carbon_fiber",
-      "ext_chrome": "ext_chrome"
     }
   },
   {
