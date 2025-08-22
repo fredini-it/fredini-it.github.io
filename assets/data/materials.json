@@ -1,0 +1,12 @@
+{
+  "00_ColorTest": {
+    "type": "carpaint_custom",
+    "primerColor": "#cd2626",
+    "basecoatColor": "#1d1d1d",
+    "midcoatColor": "#f65151",
+    "layerWeights": [0.5, 0.5],  
+    "clearcoatIntensity": 1.0,
+    "clearcoatRoughness": 0.03,
+    "flakeScale": { "x": 100, "y": 100 }
+  }
+}
