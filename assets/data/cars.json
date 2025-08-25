@@ -8,7 +8,7 @@
     "version": "GTB",
     "model": "296 GTB",
     "material": {
-      "t_ext_carpaint": "21_Blu_Abu_Dhabi",
+      "t_ext_carpaint": "magma_flake",
       "t_ext_carpaint_roof": "21_Blu_Abu_Dhabi",
       "t_ext_carpaint_rear_airouttakes": "21_Blu_Abu_Dhabi",
       "t_ext_carpaint_rear_spoiler": "21_Blu_Abu_Dhabi",
@@ -254,6 +254,14 @@
     "version": "GTO",
     "model": "599 GTO",
     "material": {
+      "t_ext_carpaint": "05_Rosso_Mugello",
+      "t_ext_carpaint_roof": "61_Nero_Stellato",
+      "t_ext_carpaint_bonnet_insert": "03_ext_plastic_matt_black",
+      "t_ext_carpaint_front_sidespoilers": "_CarbonFiber",
+      "t_ext_carpaint_frontspoiler": "_CarbonFiber",
+      "t_ext_carpaint_rear_bonnet": "_CarbonFiber",
+      "t_ext_carpaint_rear_spoiler": "_CarbonFiber",
+      "t_ext_carpaint_side_intake": "_CarbonFiber",
       "t_ext_airducts_rear": "03_ext_plastic_matt_black",
       "t_ext_brake_caliper": "05_Aluminium",
       "t_ext_brake_logo_brembo": "Brake_Logo_Red",
@@ -263,14 +271,6 @@
       "t_ext_carbon_rear_diffusor": "03_ext_plastic_matt_black",
       "t_ext_carbon_sideskirt": "03_ext_plastic_matt_black",
       "t_ext_carbon_trunk_insert": "01_ext_plastic_glossy_black",
-      "t_ext_carpaint": "05_Rosso_Mugello",
-      "t_ext_carpaint_roof": "61_Nero_Stellato",
-      "t_ext_carpaint_bonnet_insert": "03_ext_plastic_matt_black",
-      "t_ext_carpaint_front_sidespoilers": "_CarbonFiber",
-      "t_ext_carpaint_frontspoiler": "_CarbonFiber",
-      "t_ext_carpaint_rear_bonnet": "_CarbonFiber",
-      "t_ext_carpaint_rear_spoiler": "_CarbonFiber",
-      "t_ext_carpaint_side_intake": "_CarbonFiber",
       "t_ext_door_triangle": "01_ext_plastic_glossy_black",
       "t_ext_engine_bonnet_cover": "Glass_Clear",
       "t_ext_engine_compartment": "_CarbonFiber",
@@ -682,14 +682,15 @@
     }
   },
   {
-    "FModel": "360-transformed-KTX2",
+    "FModel": "f175-transformed",
     "FCar": "1562",
     "VIN": "ZF02",
     "factory": "Ferrari",
-    "group": "599",
+    "group": "Purosangue",
     "version": "GTO",
     "model": "599 GTO",
     "material": {
+      "t_ext_carpaint": "magma_flake"
     }
   },
   {

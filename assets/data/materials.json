@@ -1,12 +1,225 @@
 {
-  "00_ColorTest": {
-    "type": "carpaint_custom",
-    "primerColor": "#cd2626",
-    "basecoatColor": "#1d1d1d",
-    "midcoatColor": "#f65151",
-    "layerWeights": [0.5, 0.5],  
-    "clearcoatIntensity": 1.0,
-    "clearcoatRoughness": 0.03,
-    "flakeScale": { "x": 100, "y": 100 }
+  "01_ColorTest": {
+    "type": "paint",
+    "albedo": [1, 0, 0],
+    "metallic": 0.8,
+    "roughness": 0.45,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 1.0,
+      "roughness": 0.03,
+      "indexOfRefraction": 1.5,
+      "isTintEnabled": false
+    }
+  },
+
+  "glass_clear": {
+    "type": "glass",
+    "albedo": [0.034230206565082, 0.0986891975410945, 0.034230206565082],
+    "metallic": 0.3,
+    "roughness": 0,
+    "opacity": 0.3,
+    "thickness": 0.01,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 1,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.6,
+      "isTintEnabled": false,
+      "tintColor": [0, 0, 0],
+      "tintThickness": 1
+    }
+  },
+  "glass_windshield": {
+    "type": "glass",
+    "albedo": [0.034230206565082, 0.0986891975410945, 0.034230206565082],
+    "metallic": 0.3,
+    "roughness": 0,
+    "opacity": 0.3,
+    "thickness": 0.01,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 1,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.6,
+      "isTintEnabled": false,
+      "tintColor": [0, 0, 0],
+      "tintThickness": 1
+    }
+  },
+  "glass_window": {
+    "type": "glass",
+    "albedo": [0.034230206565082, 0.0986891975410945, 0.034230206565082],
+    "metallic": 0.3,
+    "roughness": 0,
+    "opacity": 0.3,
+    "thickness": 0.01,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 1,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.6,
+      "isTintEnabled": false,
+      "tintColor": [0, 0, 0],
+      "tintThickness": 1
+    }
+  },
+  "glass_taillight": {
+    "type": "glass",
+    "albedo": [0.81224148989849, 0, 0],
+    "metallic": 0,
+    "roughness": 0.05,
+    "opacity": 0.9,
+    "thickness": 0.01,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 1,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.55,
+      "isTintEnabled": true,
+      "tintColor": [0.701169501531402, 0, 0],
+      "tintThickness": 1
+    }
+  },
+
+  "ext_chrome": {
+    "type": "paint",
+    "albedo": [0.870588235294118, 0.870588235294118, 0.870588235294118],
+    "metallic": 0.92,
+    "roughness": 0.23
+  },
+
+  "magma": {
+    "type": "paint",
+    "albedo": [0.722672453600254, 0.027755279978126, 0],
+    "metallic": 0.8,
+    "roughness": 0.45,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 0.75,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.6,
+      "isTintEnabled": true,
+      "tintColor": [1, 1, 1],
+      "tintThickness": 3
+    }
+  },
+  "magma_flake": {
+    "type": "flaked_paint_with_tint",
+    "albedo": [0.722672453600254, 0.027755279978126, 0],
+    "metallic": 0.8,
+    "roughness": 0.45,
+    "flakeScale": { "u": 100, "v": 100 },
+    "normalStrength": { "x": 0.025, "y": 0.025 },
+    "anisotropy": 30,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 0.75,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.6,
+      "isTintEnabled": true,
+      "tintColor": [1, 1, 1],
+      "tintThickness": 3
+    }
+  },
+
+  "btdf": {
+    "type": "paint",
+    "albedo": [0.24313725490196, 0.258823529411764, 0.592156862745098],
+    "metallic": 0.7,
+    "roughness": 0.51,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 0.9,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.5,
+      "isTintEnabled": true,
+      "tintColor": [0.0823529411764705, 0.501960784313725, 0.917647058823529],
+      "tintThickness": 3
+    }
+  },
+  "btdf_flake": {
+    "type": "flaked_paint_with_tint",
+    "albedo": [0.24313725490196, 0.258823529411764, 0.592156862745098],
+    "metallic": 0.7,
+    "roughness": 0.51,
+    "flakeScale": { "u": 100, "v": 100 },
+    "normalStrength": { "x": 0.025, "y": 0.025 },
+    "anisotropy": 30,
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 0.9,
+      "roughness": 0.01,
+      "indexOfRefraction": 1.5,
+      "isTintEnabled": true,
+      "tintColor": [0.0823529411764705, 0.501960784313725, 0.917647058823529],
+      "tintThickness": 3
+    }
+  },
+
+  "tinted_carbon_fiber": {
+    "type": "tinted_carbon_fiber",
+    "metalness": 0.6,
+    "roughness": 0.4,
+    "clearcoat": 1.0,
+    "clearcoatRoughness": 0.01,
+    "textureScale": { "u": 1, "v": 1 },
+    "normalStrength": { "x": 1, "y": 1 },
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 0.9,
+      "roughness": 0.4,
+      "isTintEnabled": true,
+      "tintColor": [1, 1, 1],
+      "tintThickness": 3
+    }
+  },
+  "tinted_carbon_fiber2": {
+    "type": "tinted_carbon_fiber",
+    "metalness": 0.5,
+    "roughness": 0.56,
+    "clearcoat": 1.0,
+    "clearcoatRoughness": 0.01,
+    "albedoMap": {
+      "url": "assets/textures/Carbon/Carbon_7x7mm_D_low.jpg",
+      "offset": [0, 0],
+      "repeat": [10, -10],
+      "rotation": 0,
+      "encoding": "sRGBEncoding"
+    },
+    "normalMap": {
+      "url": "assets/textures/Carbon/Carbon_7x7mm_N_low.jpg",
+      "offset": [0, 0],
+      "repeat": [10, -10],
+      "strength": [1, 1],
+      "rotation": 0,
+      "encoding": "LinearEncoding"
+    },
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 0.5,
+      "roughness": 0.08,
+      "indexOfRefraction": 1.42,
+      "isTintEnabled": true,
+      "tintColor": [1, 1, 1],
+      "tintThickness": 3
+    }
+  },
+  "matte_carbon_fiber": {
+    "type": "tinted_carbon_fiber",
+    "metalness": 0.5,
+    "roughness": 0.43,
+    "clearcoat": 1.0,
+    "clearcoatRoughness": 0.37,
+    "textureScale": { "u": 30, "v": 30 },
+    "normalStrength": { "x": 0.5, "y": 0.5 },
+    "clearCoat": {
+      "isEnabled": true,
+      "intensity": 0.75,
+      "roughness": 0.43,
+      "isTintEnabled": true,
+      "tintColor": [1, 1, 1],
+      "tintThickness": 3
+    }
   }
 }
