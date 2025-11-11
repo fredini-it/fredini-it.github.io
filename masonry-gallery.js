@@ -1,6 +1,5 @@
 // masonry-gallery.js
 // Masonry gallery built on top of TetrisGridCore.
-// Modules are "poster" cards now, but the same pattern can work for any card content.
 
 (function () {
   'use strict';
@@ -16,7 +15,9 @@
     const header = lines[0].split(',').map(h => h.trim().toLowerCase());
     const idxName = header.indexOf('name');
     const idxLink = header.indexOf('link');
-    const idxSpan = header.indexOf('span'); // optional third column
+    const idxSpan = header.indexOf('span');     // optional
+    const idxPin = header.indexOf('pin');       // optional ("center" etc.)
+    const idxPinRow = header.indexOf('pinrow'); // optional rowStart for pinned
 
     const items = [];
 
@@ -25,17 +26,41 @@
       if (!line) continue;
 
       const cols = line.split(',');
-      const name = (idxName >= 0 && cols[idxName] != null) ? cols[idxName].trim() : '';
-      const link = (idxLink >= 0 && cols[idxLink] != null) ? cols[idxLink].trim() : '';
+      const name =
+        idxName >= 0 && cols[idxName] != null ? cols[idxName].trim() : '';
+      const link =
+        idxLink >= 0 && cols[idxLink] != null ? cols[idxLink].trim() : '';
+
       let span = 1;
       if (idxSpan >= 0 && cols[idxSpan] != null && cols[idxSpan].trim() !== '') {
-        span = parseInt(cols[idxSpan].trim(), 10);
-        if (isNaN(span) || span < 1) span = 1;
+        const s = parseInt(cols[idxSpan].trim(), 10);
+        if (!isNaN(s) && s > 0) span = s;
+      }
+
+      let pin = null;
+      if (idxPin >= 0 && cols[idxPin] != null && cols[idxPin].trim() !== '') {
+        pin = cols[idxPin].trim().toLowerCase(); // e.g. "center"
+      }
+
+      let pinRow = null;
+      if (
+        idxPinRow >= 0 &&
+        cols[idxPinRow] != null &&
+        cols[idxPinRow].trim() !== ''
+      ) {
+        const pr = parseInt(cols[idxPinRow].trim(), 10);
+        if (!isNaN(pr) && pr > 0) pinRow = pr;
       }
 
       if (!name && !link) continue;
 
-      items.push({ name, link, span });
+      items.push({
+        name: name,
+        link: link,
+        span: span,
+        pin: pin,
+        pinRow: pinRow
+      });
     }
 
     return items;
@@ -47,9 +72,17 @@
 
   function getImageDimensions(src) {
     return new Promise(resolve => {
+      if (!src) {
+        resolve({ width: 1, height: 1 });
+        return;
+      }
       const img = new Image();
-      img.onload = () => resolve({ width: img.width, height: img.height });
-      img.onerror = () => resolve({ width: 1, height: 1 }); // avoid zero
+      img.onload = function () {
+        resolve({ width: img.width || 1, height: img.height || 1 });
+      };
+      img.onerror = function () {
+        resolve({ width: 1, height: 1 });
+      };
       img.src = src;
     });
   }
@@ -58,7 +91,6 @@
   // Masonry row sizing helpers
   // ---------------------------
 
-  // Convert CSS length (e.g. "0.75pt" or "1px") to px
   function cssLengthToPx(lengthStr) {
     if (!lengthStr) return 1;
     const match = lengthStr.trim().match(/([\d.]+)\s*([a-z%]+)/i);
@@ -71,10 +103,10 @@
       case 'px':
         return value;
       case 'pt':
-        // CSS: 1pt = 1/72in, 1px = 1/96in → 1pt = 96/72 px ≈ 1.3333
+        // CSS: 1pt = 1/72in, 1px = 1/96in -> 1pt = 96/72 px
         return value * (96 / 72);
       default:
-        return value; // fallback: treat as px-like
+        return value;
     }
   }
 
@@ -113,45 +145,78 @@
     const dimensionPromises = items.map(item => getImageDimensions(item.link));
     const dimensionsList = await Promise.all(dimensionPromises);
 
+    // Pinned items first so their grid cells are reserved
+    const pinned = [];
+    const normal = [];
+
     for (let i = 0; i < items.length; i++) {
-      const poster = items[i];
-      const dims = dimensionsList[i];
-      const aspectRatio = (dims.height / dims.width) * 100 || 100;
+      const base = items[i];
+      const dims = dimensionsList[i] || { width: 1, height: 1 };
+      const merged = {
+        name: base.name,
+        link: base.link,
+        span: base.span,
+        pin: base.pin,
+        pinRow: base.pinRow,
+        width: dims.width,
+        height: dims.height
+      };
+      if (merged.pin) pinned.push(merged);
+      else normal.push(merged);
+    }
+
+    const allOrdered = pinned.concat(normal);
+
+    // Cache current column count once
+    const initialCols = TetrisGridCore.getCurrentColumnCount();
+
+    // Create DOM elements
+    for (let i = 0; i < allOrdered.length; i++) {
+      const poster = allOrdered[i];
+      const aspectRatio = (poster.height / poster.width) * 100 || 100;
 
       const posterContainer = document.createElement('div');
       posterContainer.className = 'poster-container masonry-brick';
 
-      // Column-span from CSV (default 1)
-      const cols = TetrisGridCore.getCurrentColumnCount();
-      const actualSpan = TetrisGridCore.computeSpan(poster.span, cols);
-      if (actualSpan > 1) {
-        posterContainer.style.gridColumnEnd = 'span ' + actualSpan;
-        posterContainer.classList.add('span-' + actualSpan);
-      }
-
-      const link = document.createElement('a');
-
-      // Special case for "render" if you still want that behaviour
-      if (poster.name === 'render') {
-        link.href = '/render.html';
-        link.setAttribute('aria-label', 'Go to render');
+      // Dataset for pinned info (used on resize / orientation change)
+      if (poster.pin) {
+        posterContainer.dataset.pin = poster.pin;
+        posterContainer.dataset.span = String(poster.span || 1);
+        if (poster.pinRow) {
+          posterContainer.dataset.pinRow = String(poster.pinRow);
+        }
       } else {
-        // Random-ish pin URL
-        link.href = '/pin/' + Math.floor(Math.random() * 1e16) + '/';
-        link.setAttribute('aria-label', 'Página do Pin ' + poster.name);
+        // NON-PINNED: apply span horizontally right away
+        const effectiveSpan = TetrisGridCore.computeSpan(
+          poster.span || 1,
+          initialCols
+        );
+        if (effectiveSpan > 1) {
+          posterContainer.style.gridColumnEnd = 'span ' + effectiveSpan;
+          posterContainer.classList.add('span-' + effectiveSpan);
+        }
       }
-      link.tabIndex = 0;
+
+      const linkEl = document.createElement('a');
+
+      // Special case kept from your earlier logic
+      if (poster.name === 'render') {
+        linkEl.href = '/render.html';
+        linkEl.setAttribute('aria-label', 'Go to render');
+      } else {
+        linkEl.href = '/pin/' + Math.floor(Math.random() * 1e16) + '/';
+        linkEl.setAttribute('aria-label', 'Página do Pin ' + poster.name);
+      }
+      linkEl.tabIndex = 0;
 
       const posterDiv = document.createElement('div');
       posterDiv.className = 'poster masonry-content';
       posterDiv.style.position = 'relative';
 
-      // Aspect-ratio placeholder (so layout doesn't jump while image loads)
       const placeholder = document.createElement('div');
       placeholder.style.paddingBottom = aspectRatio + '%';
       posterDiv.appendChild(placeholder);
 
-      // Actual image
       const img = document.createElement('img');
       img.src = poster.link;
       img.alt =
@@ -166,30 +231,53 @@
       img.style.height = '100%';
       img.style.objectFit = 'cover';
 
-      // When image finishes loading, resize its masonry brick
       img.addEventListener('load', function () {
         resizeMasonryItem(posterContainer);
       });
 
       posterDiv.appendChild(img);
-      link.appendChild(posterDiv);
-      posterContainer.appendChild(link);
+      linkEl.appendChild(posterDiv);
+      posterContainer.appendChild(linkEl);
       gallery.appendChild(posterContainer);
     }
 
-    // Initial layout
-    TetrisGridCore.applyColumnsToGrid(gallery);
-    resizeAllMasonryItems();
+    // Initial layout after all items added
+    handleResizeOrLoad();
   }
 
   // ---------------------------
-  // Global load / resize handling
+  // Global resize / load handling
   // ---------------------------
 
   function handleResizeOrLoad() {
     const grid = document.querySelector('.gallery.masonry');
     if (!grid) return;
-    TetrisGridCore.applyColumnsToGrid(grid);
+
+    // Apply columns and get current count
+    const cols = TetrisGridCore.applyColumnsToGrid(grid);
+
+    // Recompute pinned placement for current column count
+    const pinnedItems = document.querySelectorAll('.masonry-brick[data-pin]');
+    pinnedItems.forEach(function (item) {
+      const pin = item.dataset.pin;
+      const requestedSpan = parseInt(item.dataset.span || '1', 10) || 1;
+      const span = TetrisGridCore.computeSpan(requestedSpan, cols);
+      const rowStart = parseInt(item.dataset.pinRow || '2', 10) || 1;
+
+      if (pin === 'center') {
+        const colStart = TetrisGridCore.computeCenterColStart(span, cols);
+        // Example:
+        //   cols=6, span=2 → colStart=3 → "3_2" (3–4)
+        //   cols=2, span=2 → colStart=1 → "1_2" (1–2)
+        item.style.gridColumn = colStart + ' / span ' + span;
+        item.style.gridRowStart = String(rowStart);
+      } else {
+        // Fallback: just respect span horizontally
+        item.style.gridColumnEnd = 'span ' + span;
+      }
+    });
+
+    // Size all bricks vertically for masonry effect
     resizeAllMasonryItems();
   }
 
@@ -200,13 +288,17 @@
   // Bootstrap: load CSV → gallery
   // ---------------------------
 
-  fetch('posters.csv')
-    .then(response => response.text())
-    .then(csvText => {
+  // posters.csv should be in /public so it's available at /posters.csv in dev + build
+  fetch('/posters.csv')
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (csvText) {
       const items = parseCSV(csvText);
       return createGallery(items);
     })
-    .catch(err => {
+    .catch(function (err) {
       console.error('Error loading posters.csv:', err);
     });
+
 })();
