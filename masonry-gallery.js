@@ -128,33 +128,9 @@
 
   function resizeAllMasonryItems() {
     const allItems = document.getElementsByClassName('masonry-brick');
-    console.log('Resizing', allItems.length, 'masonry items');
-    performance.mark('resize-start');
-    const startResize = performance.now();
-
-    const grid = document.querySelector('.gallery.masonry');
-    if (!grid) return;
-    const rowSize = window.getComputedStyle(grid).getPropertyValue('grid-auto-rows') || '1px';
-    const rowHeight = cssLengthToPx(rowSize) || 1;
-
-    // Batch all getBoundingClientRect() reads first
-    const heights = [];
     for (let i = 0; i < allItems.length; i++) {
-      heights.push(allItems[i].getBoundingClientRect().height);
+      resizeMasonryItem(allItems[i]);
     }
-
-    // Then apply gridRowEnd styles in a separate loop
-    for (let i = 0; i < allItems.length; i++) {
-      const item = allItems[i];
-      const contentHeight = heights[i];
-      const rowSpan = Math.ceil(contentHeight / rowHeight) || 1;
-      item.style.gridRowEnd = 'span ' + rowSpan;
-    }
-
-    const endResize = performance.now();
-    performance.mark('resize-end');
-    performance.measure('resize-duration', 'resize-start', 'resize-end');
-    console.log('Resize took', endResize - startResize, 'ms');
   }
 
   // ---------------------------
@@ -166,12 +142,8 @@
     if (!gallery) return;
 
     // Load dimensions in parallel for aspect ratio placeholders
-    console.log('Starting dimension loading for', items.length, 'items');
-    const startDim = performance.now();
     const dimensionPromises = items.map(item => getImageDimensions(item.link));
     const dimensionsList = await Promise.all(dimensionPromises);
-    const endDim = performance.now();
-    console.log('Dimension loading took', endDim - startDim, 'ms');
 
     // Pinned items first so their grid cells are reserved
     const pinned = [];
@@ -199,9 +171,6 @@
     const initialCols = TetrisGridCore.getCurrentColumnCount();
 
     // Create DOM elements
-    console.log('Starting DOM creation for', allOrdered.length, 'items');
-    performance.mark('dom-creation-start');
-    const startDom = performance.now();
     for (let i = 0; i < allOrdered.length; i++) {
       const poster = allOrdered[i];
       const aspectRatio = (poster.height / poster.width) * 100 || 100;
@@ -270,22 +239,9 @@
       linkEl.appendChild(posterDiv);
       posterContainer.appendChild(linkEl);
       gallery.appendChild(posterContainer);
-
-      // Add hover performance logging
-      posterContainer.addEventListener('mouseenter', () => {
-        performance.mark('hover-start-' + i);
-      });
-      posterContainer.addEventListener('mouseleave', () => {
-        performance.mark('hover-end-' + i);
-        performance.measure('hover-duration-' + i, 'hover-start-' + i, 'hover-end-' + i);
-      });
     }
-    const endDom = performance.now();
-    console.log('DOM creation took', endDom - startDom, 'ms');
 
     // Initial layout after all items added
-    performance.mark('dom-creation-end');
-    performance.measure('dom-creation-duration', 'dom-creation-start', 'dom-creation-end');
     handleResizeOrLoad();
   }
 
@@ -294,8 +250,6 @@
   // ---------------------------
 
   function handleResizeOrLoad() {
-    console.log('Handling resize or load');
-    performance.mark('handle-resize-start');
     const grid = document.querySelector('.gallery.masonry');
     if (!grid) return;
 
@@ -325,8 +279,6 @@
 
     // Size all bricks vertically for masonry effect
     resizeAllMasonryItems();
-    performance.mark('handle-resize-end');
-    performance.measure('handle-resize-duration', 'handle-resize-start', 'handle-resize-end');
   }
 
   window.addEventListener('load', handleResizeOrLoad);
@@ -343,7 +295,6 @@
     })
     .then(function (csvText) {
       const items = parseCSV(csvText);
-      console.log('Parsed items count:', items.length);
       return createGallery(items);
     })
     .catch(function (err) {
