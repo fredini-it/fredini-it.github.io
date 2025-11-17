@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Welcome to the Grid",
+    "subtitle": "Intro",
+    "body": "This screen uses the same TetrisGridCore, but each module is a card instead of an image.",
+    "span": 2,
+    "tags": ["overview", "system"],
+    "ctaText": "View gallery",
+    "ctaHref": "/"
+  },
+  {
+    "title": "Performance First",
+    "subtitle": "Web mobile criteria",
+    "body": "All layout decisions are done with light JS math. No heavy DOM thrashing, no per-scroll layout.",
+    "span": 1,
+    "tags": ["performance"],
+    "ctaText": "Learn more",
+    "ctaHref": "#"
+  },
+  {
+    "title": "CSV or JSON Driven",
+    "subtitle": "Data model",
+    "body": "Modules can come from CSV or JSON. Each module defines its span and content, the layout engine does the rest.",
+    "span": 1,
+    "tags": ["data", "layout"]
+  },
+  {
+    "title": "Span 2 Hero Card",
+    "subtitle": "Module weight",
+    "body": "Cards with span=2 get more visual emphasis. The core clamps spans to the current column count so it works on every device.",
+    "span": 2,
+    "tags": ["hero", "span=2"]
+  },
+  {
+    "title": "Future: Bands & Centered Blocks",
+    "subtitle": "Roadmap",
+    "body": "Next step is band-aware layout: pinned search bars, centered modules, and more complex page sections.",
+    "span": 1,
+    "tags": ["roadmap"]
+  }
+]
