@@ -6,19 +6,38 @@
     <title>Fredini Galleria</title>
     <link rel="icon" type="image/x-icon" href="/it.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" crossorigin href="/assets/main-CNWHMgPK.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-B-GVYMkj.css">
 </head>
 
 <body>
+    <!-- Fixed Header: Compact Solid Green & Logo -->
+    <header id="main-header" class="cinematic-header">
+        <div class="header-bg"></div>
+        <div class="logo-container">
+            <img src="fredini.svg" alt="Fredini Logo" class="fredini-logo">
+        </div>
+    </header>
+
     <main>
-        <!-- You can put a search bar or header here later -->
         <section id="gallery" class="gallery masonry"></section>
     </main>
 
-    <!-- Core grid logic (columns, responsive) -->
+    <!-- Scripts -->
     <script src="tetris-grid-core.js"></script>
-    <!-- Page-specific wiring for the masonry gallery -->
     <script src="masonry-gallery.js"></script>
+
+    <!-- Scroll Effect Script -->
+    <script>
+        document.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            // Trigger shrink earlier (10px) since header is already small
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
+    </script>
 </body>
 
 </html>
